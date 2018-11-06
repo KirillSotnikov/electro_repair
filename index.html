@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>   
+    <title>Repair</title>   
     <link rel="stylesheet" href="slick/slick.css" />
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/fonts.css">
@@ -29,18 +29,24 @@
              <a href="#" class="menu_box_link">контакты</a>
          </div>   
     </header>
-    <div class="menu">
-        <img src="img/menu.png" alt="" class="menu_btn">
-        <div class="menu_social">
-            <a href="#" class="menu_social_icon"><img src="img/twitter.png" alt=""></a>
-            <a href="#" class="menu_social_icon"><img src="img/insta.png" alt=""></a>
-            <a href="#" class="menu_social_icon"><img src="img/facebook.png" alt=""></a>
-            
-            
-            
-        </div>
-    </div>
     <section class="first">
+            <div class="menu">
+                <div class="menu_container">
+                    <img src="img/menu.png" alt="" class="menu_btn">
+                    <div class="menu_social">
+                        <a href="#" class="menu_social_icon"><img src="img/twitter.png" alt=""></a>
+                        <a href="#" class="menu_social_icon"><img src="img/insta.png" alt=""></a>
+                        <a href="#" class="menu_social_icon"><img src="img/facebook.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="mob_menu">
+                    <a href="#" class="mob_menu_link active">главная</a>
+                    <a href="#" class="mob_menu_link">о нас</a>
+                    <a href="#" class="mob_menu_link">статус заказа</a>
+                    <a href="#" class="mob_menu_link">блог</a>
+                    <a href="#" class="mob_menu_link">контакты</a>
+                </div>
+            </div>
         <div class="line"></div>
         <p class="site_desc">new site 2018</p>
         <div class="wrapper flex">
@@ -68,7 +74,7 @@
                 </div>
                 <div class="big_slider_text">
                     <p><b>ПРОФЕССИОНАЛЬНЫЙ</b> РЕМОНТ ЭЛЕКТРОНИКИ</p>
-                    <a class="big_slider_text_btn">позвонить</a>
+                    <a class="big_slider_text_btn modal_opener">позвонить</a>
                 </div>
             </div>
             <div class="nav_slider">
@@ -109,11 +115,12 @@
             <div class="container_box column">
                 <p class="container_box_title">ремонт <b>ноутбуков</b> </p>
                 <p class="container_box_desc">закажи ремонт своего ноутбука</p>
-                <a class="container_box_btn">позвонить</a>
+                <a class="container_box_btn modal_opener">позвонить</a>
             </div>
         </div>
         <div class="container w65">
-            <img src="img/laptop.png" alt="" class="image">
+            <img src="img/laptop1.png" alt="" class="image">
+            <img src="img/laptop600.png" class="image_2">
             <div class="text_area">
                 <p class="text_area_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
             </div>
@@ -150,7 +157,7 @@
         <div class="container w35 column">
             <p class="container_title">ЧЕРНАЯ <b>ПЯТНИЦА</b> </p>
             <p class="container_sale">скидки до <b>50%</b> </p>
-            <a class="container_btn">ПОЛУЧИТЬ СКИДКУ</a>
+            <a class="container_btn modal_opener">ПОЛУЧИТЬ СКИДКУ</a>
         </div>
     </section>
     <section class="fourth">
@@ -285,8 +292,8 @@
         <div class="container">
             <div class="footer_form">
                 <p class="footer_form_title">Lorem ipsum dolor sit</p>
-                <form class="footer_form_box">
-                    <input type="email" class="footer_form_box_input" placeholder="отправить email">
+                <form method="POST" id="footer_mail" action="javascript:void(null);" onsubmit="footer_mail()" class="footer_form_box">
+                    <input type="email" id="footer_mail" name="footer_mail" value="" class="footer_form_box_input" placeholder="отправить email">
                     <input type="submit" value="›" class="footer_form_box_btn">
                 </form>
                 <div class="footer_form_social">
@@ -306,10 +313,79 @@
             </div>
         </div>
     </footer>
+    
+    <img src="img/menu.png" alt="Menu" class="modal_menu_btn">
+    <div class="modal_menu_box">
+        <a href="#" class="modal_menu_box_link active">главная</a>
+        <a href="#" class="modal_menu_box_link">о нас</a>
+        <a href="#" class="modal_menu_box_link">статус заказа</a>
+        <a href="#" class="modal_menu_box_link">блог</a>
+        <a href="#" class="modal_menu_box_link">контакты</a>
+        <svg width="64" class="modal_menu_box_closer" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+            <g>
+              <path fill="#1D1D1B" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+            </g>
+          </svg>
+    </div>
 
+    <form method="POST" id="modal" action="javascript:void(null);" onsubmit="modal()" class="modal">
+        <input type="text" class="modal_name" id="modal_name" name="modal_name" value="" placeholder="имя:">
+        <input type="text" class="modal_tel" id="modal_phone" name="modal_phone" value="" placeholder="телефон:">
+        <input type="submit" value="отправить" class="modal_btn">
+        <img src="img/arrow.png" alt="" class="modal_closer">
+    </form>
+
+    <div class="success">
+        <p>Ваша форма отправлена. <br> С вами свяжутся в ближайшее время!</p>
+    </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function modal() {
+            var msg   = $('#modal').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/send_modal.php',
+                data: msg,
+            success: function(data) {
+                $('.success').addClass('active');
+
+                function removeSuccess () {
+                    $('.success').removeClass('active');
+                }
+
+                setTimeout(removeSuccess, 6000);
+                // Тут можно скрывать форму и показывать надпись “спасибо”
+            },
+            error:  function(xhr, str){
+                // Если форма не отправлена (error срабатывает только при ошибки отпарвки, а не пустых полей!)
+            }
+            });
+        };
+        function footer_mail() {
+            var msg   = $('#footer_mail').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/send_footer.php',
+                data: msg,
+            success: function(data) {
+                $('.success').addClass('active');
+
+                function removeSuccess () {
+                    $('.success').removeClass('active');
+                }
+
+                setTimeout(removeSuccess, 6000);
+                // Тут можно скрывать форму и показывать надпись “спасибо”
+            },
+            error:  function(xhr, str){
+                // Если форма не отправлена (error срабатывает только при ошибки отпарвки, а не пустых полей!)
+            }
+            });
+        };
+    </script>
     <script src="js/index.js"></script>
+
 </body>
 </html>
