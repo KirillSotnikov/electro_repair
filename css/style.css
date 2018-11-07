@@ -81,18 +81,23 @@ header .header_desc {
   font-family: "AvenirNextCyr";
   color: #ffffff;
   font-weight: bold;
-  background-image: -moz-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
-  background-image: -webkit-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
-  background-image: -ms-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
   line-height: 1.2;
   border-width: 2px;
-  border-color: #343a3f;
+  border-color: transparent;
+  color: #22282d;
   border-style: solid;
   border-radius: 19px;
   margin-left: 40px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+}
+header .header_desc:hover {
+  color: #fff;
+  border-color: #343a3f;
+  background-image: -moz-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
+  background-image: -webkit-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
+  background-image: -ms-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
 }
 header .menu_box {
   justify-self: flex-end;
